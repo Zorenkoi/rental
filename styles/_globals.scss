@@ -10,6 +10,9 @@ body {
   min-height: 100vh;
 }
 
+.mobile {
+  display: none;
+}
 button,
 a {
   cursor: pointer;
@@ -64,8 +67,9 @@ a {
 }
 .button {
   position: relative;
-  height: 50px;
-  padding: 0px 27px;
+  height: 40px;
+  padding: 0px 24px;
+  font-size: 15px;
   background-color: $button-background;
   color: white;
   display: flex;
@@ -73,7 +77,6 @@ a {
   align-items: center;
   font-family: "Mulish", sans-serif;
   border-radius: 4px;
-  font-size: 25px;
   overflow: hidden;
   text-transform: uppercase;
   flex-shrink: 0;
