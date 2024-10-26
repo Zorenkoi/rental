@@ -44,6 +44,10 @@ table {
   border-spacing: 0;
 }
 
+address {
+  font-style: normal;
+}
+
 /* /////////////////////////////////////////// */
 /* @font-face {
   font-family: "Arial";
