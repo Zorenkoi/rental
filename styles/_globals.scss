@@ -45,6 +45,7 @@ a {
 
   & span {
     position: relative;
+    text-transform: uppercase;
   }
 
   &::before {
@@ -123,6 +124,7 @@ a {
   font-size: 30px;
   font-family: 600;
   line-height: 30px;
+  letter-spacing: 3px;
 }
 .header3 {
   color: $header-color;
@@ -146,6 +148,7 @@ a {
     font-weight: 500;
     line-height: 22px;
     white-space: nowrap;
+    font-family: "Marcellus", sans-serif;
   }
 
   & img {

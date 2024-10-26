@@ -3,22 +3,27 @@
 
 .features-header {
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 260px);
-  gap: 20px;
-}
-.features-list {
+  column-gap: 20px;
+  row-gap: 15px;
 }
 
 @media (max-width: 860px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
   }
 }
+
 @media (max-width: 500px) {
   .features-grid {
-    grid-template-columns: 1fr;
+    .text {
+      font-size: 12px;
+      white-space: wrap;
+    }
   }
 }

@@ -4,6 +4,7 @@
 
 .essential-header {
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 .essential-grid {
   display: grid;
@@ -15,7 +16,6 @@
   gap: 20px;
 }
 .essential-info {
-  // background-color: red;
   position: relative;
   padding-left: 40px;
   padding-top: 5px;
@@ -52,5 +52,8 @@
   .essential-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  .essential-info-list {
+    padding-left: 0px;
   }
 }

@@ -37,7 +37,7 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    border: 4px solid black;
+    border: 3px solid black;
     border-left: none;
     border-bottom: none;
   }
@@ -62,5 +62,11 @@
   .swiper-next {
     width: 30px;
     height: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .slider-section {
+    padding: 10px;
   }
 }

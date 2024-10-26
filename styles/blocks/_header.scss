@@ -1,12 +1,13 @@
 .header {
   position: relative;
   background-color: $dark-background;
+  font-family: "Mulish", sans-serif;
   color: white;
 }
 .header-container {
   max-width: 1420px;
   margin: 0px auto;
-  padding: 0px 20px;
+  padding: 0px 43px;
 }
 .header-body {
   height: 88px;
@@ -18,11 +19,22 @@
   border-top: 1px solid $header-color;
 }
 .header-bottom-body {
-  height: 70px;
+  height: 68px;
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 10px;
+
+  font-size: 13px;
+  line-height: 22px;
+  font-size: 13px;
+  color: #a0a0a0;
+
+  & a {
+    @include hover {
+      color: white;
+    }
+  }
 }
 .header-bottom-link {
   @include hover {
@@ -61,6 +73,7 @@
   padding: 21px;
   white-space: nowrap;
   position: relative;
+  text-transform: uppercase;
 
   &::before {
     content: "";
@@ -98,10 +111,10 @@
 }
 .menu-button {
   position: relative;
-  width: 42px;
-  height: 42px;
+  width: 30px;
+  height: 30px;
   border-radius: 4px;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.511);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,16 +125,17 @@
 
     width: 60%;
     height: 2px;
+    border-radius: 2px;
     background-color: white;
-    box-shadow: 0px 8px white, 0px -8px white;
+    box-shadow: 0px 6px white, 0px -6px white;
   }
 }
 .header-navigation-close {
   position: absolute;
-  top: 23px;
-  right: 20px;
-  width: 42px;
-  height: 42px;
+  top: 19px;
+  right: 43px;
+  width: 30px;
+  height: 30px;
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -134,7 +148,7 @@
 
     width: 110%;
     height: 2px;
-    background-color: white;
+    background-color: $header-mobile-link-color;
     rotate: 45deg;
   }
   &::after {
@@ -142,7 +156,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .header {
     .desktop {
       display: none;
@@ -151,12 +165,16 @@
       display: block;
     }
   }
+  .header-body {
+    height: 69px;
+  }
   .header-navigation {
-    width: 260px;
+    box-sizing: border-box;
+    width: 340px;
     height: 100vh;
     padding: 70px 40px;
     position: absolute;
-    background-color: $dark-background;
+    background-color: $menu-background;
     right: 0px;
     top: 0px;
 
@@ -178,5 +196,15 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
+  }
+  .header-navigation-link {
+    text-transform: uppercase;
+    padding: 0px;
+    color: $header-mobile-link-color;
+    font-size: 25px;
+
+    &::before {
+      display: none;
+    }
   }
 }

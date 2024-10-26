@@ -103,6 +103,7 @@ a {
 }
 .header-button span {
   position: relative;
+  text-transform: uppercase;
 }
 .header-button::before {
   content: "";
@@ -191,6 +192,7 @@ a {
   font-size: 30px;
   font-family: 600;
   line-height: 30px;
+  letter-spacing: 3px;
 }
 
 .header3 {
@@ -217,6 +219,7 @@ a {
   font-weight: 500;
   line-height: 22px;
   white-space: nowrap;
+  font-family: "Marcellus", sans-serif;
 }
 .icontext-item img {
   width: 30px;
@@ -446,13 +449,14 @@ a {
 .header {
   position: relative;
   background-color: #181d23;
+  font-family: "Mulish", sans-serif;
   color: white;
 }
 
 .header-container {
   max-width: 1420px;
   margin: 0px auto;
-  padding: 0px 20px;
+  padding: 0px 43px;
 }
 
 .header-body {
@@ -467,11 +471,25 @@ a {
 }
 
 .header-bottom-body {
-  height: 70px;
+  height: 68px;
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 10px;
+  font-size: 13px;
+  line-height: 22px;
+  font-size: 13px;
+  color: #a0a0a0;
+}
+@media (hover: hover) {
+  .header-bottom-body a:hover {
+    color: white;
+  }
+}
+@media (hover: none) {
+  .header-bottom-body a:active {
+    color: white;
+  }
 }
 
 @media (hover: hover) {
@@ -519,6 +537,7 @@ a {
   padding: 21px;
   white-space: nowrap;
   position: relative;
+  text-transform: uppercase;
 }
 .header-navigation-link::before {
   content: "";
@@ -558,10 +577,10 @@ a {
 
 .menu-button {
   position: relative;
-  width: 42px;
-  height: 42px;
+  width: 30px;
+  height: 30px;
   border-radius: 4px;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.511);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -571,16 +590,17 @@ a {
   position: absolute;
   width: 60%;
   height: 2px;
+  border-radius: 2px;
   background-color: white;
-  box-shadow: 0px 8px white, 0px -8px white;
+  box-shadow: 0px 6px white, 0px -6px white;
 }
 
 .header-navigation-close {
   position: absolute;
-  top: 23px;
-  right: 20px;
-  width: 42px;
-  height: 42px;
+  top: 19px;
+  right: 43px;
+  width: 30px;
+  height: 30px;
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -591,26 +611,30 @@ a {
   position: absolute;
   width: 110%;
   height: 2px;
-  background-color: white;
+  background-color: #ac835d;
   rotate: 45deg;
 }
 .header-navigation-close::after {
   rotate: -45deg;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .header .desktop {
     display: none;
   }
   .header .mobile {
     display: block;
   }
+  .header-body {
+    height: 69px;
+  }
   .header-navigation {
-    width: 260px;
+    box-sizing: border-box;
+    width: 340px;
     height: 100vh;
     padding: 70px 40px;
     position: absolute;
-    background-color: #181d23;
+    background-color: #1f242a;
     right: 0px;
     top: 0px;
     flex-direction: column;
@@ -629,6 +653,15 @@ a {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
+  }
+  .header-navigation-link {
+    text-transform: uppercase;
+    padding: 0px;
+    color: #ac835d;
+    font-size: 25px;
+  }
+  .header-navigation-link::before {
+    display: none;
   }
 }
 .slider-section {
@@ -678,7 +711,7 @@ a {
   left: 0px;
   width: 100%;
   height: 100%;
-  border: 4px solid black;
+  border: 3px solid black;
   border-left: none;
   border-bottom: none;
 }
@@ -706,7 +739,13 @@ a {
     height: 30px;
   }
 }
+@media (max-width: 800px) {
+  .slider-section {
+    padding: 10px;
+  }
+}
 .reserve-header {
+  text-transform: uppercase;
   margin-bottom: 30px;
 }
 
@@ -722,6 +761,10 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+.reserve-icontext-list .text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 .reserve-actions {
@@ -739,6 +782,8 @@ a {
   margin-bottom: 30px;
   justify-content: flex-end;
   width: 100%;
+  font-family: "Marcellus", sans-serif;
+  font-size: 22px;
 }
 
 @media (max-width: 850px) {
@@ -760,6 +805,18 @@ a {
     display: block;
   }
 }
+@media (max-width: 580px) {
+  .reserve-icontext-list {
+    gap: 10px;
+  }
+  .reserve-icontext-list img {
+    width: 20px;
+    height: 20px;
+  }
+  .reserve-icontext-list p {
+    font-size: 12px;
+  }
+}
 @media (max-width: 500px) {
   .reserve-actions-info {
     justify-content: space-between;
@@ -767,6 +824,7 @@ a {
 }
 .about-header {
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .about-body {
@@ -793,6 +851,7 @@ a {
 
 .bedrooms-header {
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .bedrooms-list {
@@ -820,22 +879,28 @@ a {
 }
 .features-header {
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 260px);
-  gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 15px;
 }
 
 @media (max-width: 860px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
 }
 @media (max-width: 500px) {
-  .features-grid {
-    grid-template-columns: 1fr;
+  .features-grid .text {
+    font-size: 12px;
+    white-space: wrap;
   }
 }
 .video-section {
@@ -862,6 +927,10 @@ a {
        column-gap: 50px;
   row-gap: 20px;
 }
+.location-list .text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
 
 .location-item {
   align-items: flex-start;
@@ -883,6 +952,7 @@ a {
 
 .essential-header {
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .essential-grid {
@@ -936,6 +1006,9 @@ a {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .essential-info-list {
+    padding-left: 0px;
+  }
 }
 .reviews-section {
   position: relative;
@@ -950,6 +1023,10 @@ a {
   justify-content: flex-start;
   gap: 20px;
   align-items: center;
+}
+
+.reviews-header {
+  text-transform: uppercase;
 }
 
 .quotation-text {

@@ -2,6 +2,7 @@
 }
 
 .reserve-header {
+  text-transform: uppercase;
   margin-bottom: 30px;
 }
 .reserve-body {
@@ -15,6 +16,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  & .text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
 }
 
 .reserve-actions {
@@ -31,6 +37,8 @@
   margin-bottom: 30px;
   justify-content: flex-end;
   width: 100%;
+  font-family: "Marcellus", sans-serif;
+  font-size: 22px;
 }
 
 @media (max-width: 850px) {
@@ -50,6 +58,19 @@
   }
   .reserve-section .mobile {
     display: block;
+  }
+}
+
+@media (max-width: 580px) {
+  .reserve-icontext-list {
+    gap: 10px;
+    & img {
+      width: 20px;
+      height: 20px;
+    }
+    & p {
+      font-size: 12px;
+    }
   }
 }
 
