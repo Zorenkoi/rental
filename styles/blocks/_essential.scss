@@ -1,0 +1,52 @@
+.essential-section {
+  background-color: white;
+}
+
+.essential-header {
+  margin-bottom: 30px;
+}
+.essential-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.essential-collumn {
+  display: grid;
+  gap: 20px;
+}
+.essential-info-top {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.essential-info-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.essential-info-title {
+  font-size: 20px;
+}
+.title {
+}
+.essential-info-body {
+  display: grid;
+  gap: 10px;
+}
+
+.essential-info-list {
+  list-style: disc;
+  padding-left: 25px;
+}
+.essential-info-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .essential-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

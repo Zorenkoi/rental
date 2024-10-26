@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 100%; /* Ensures font size consistency */
+  font-family: inherit; /* Uses the default system font */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%; /* Makes media elements responsive */
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit; /* Removes default font and applies inherited styles */
+  border: none; /* Removes the default border */
+  background: none; /* Removes default background */
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Resets link styles */
+}
+
+ul,
+ol {
+  list-style: none; /* Removes default list styling */
+}
+
+table {
+  border-collapse: collapse; /* Removes default table border spacing */
+  border-spacing: 0;
+}

@@ -1,0 +1,24 @@
+.features-section {
+}
+
+.features-header {
+  margin-bottom: 30px;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 260px);
+  gap: 20px;
+}
+.features-list {
+}
+
+@media (max-width: 860px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

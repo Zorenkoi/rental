@@ -1,0 +1,25 @@
+.about-section {
+}
+.about-header {
+  margin-bottom: 30px;
+}
+.about-body {
+  & p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  margin-bottom: 15px;
+}
+.about-title {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.about-body .more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+
+.more-content.expanded {
+  max-height: 1000px;
+}

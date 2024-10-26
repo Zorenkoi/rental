@@ -1,0 +1,29 @@
+.bedrooms-section {
+}
+
+.bedrooms-header {
+  margin-bottom: 30px;
+}
+.bedrooms-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 25px;
+  row-gap: 25px;
+  flex-wrap: wrap;
+}
+.icontext-item {
+}
+.bedrooms-list-item {
+  gap: 25px;
+
+  & img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .bedrooms-list {
+    padding: 0px 25px;
+  }
+}

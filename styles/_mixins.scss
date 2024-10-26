@@ -1,0 +1,53 @@
+@function map-justify($justify) {
+  @if $justify == "between" {
+    @return space-between;
+  } @else if $justify == "around" {
+    @return space-around;
+  } @else if $justify == "evenly" {
+    @return space-evenly;
+  } @else {
+    @return $justify;
+  }
+}
+
+@function map-align($align) {
+  @if $align == "start" {
+    @return flex-start;
+  } @else if $align == "end" {
+    @return flex-end;
+  } @else {
+    @return $align;
+  }
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: #{map-justify($justify)};
+  align-items: #{map-align($align)};
+}
+
+/* /////////////////////////////////////////// */
+
+@mixin container($max, $padding) {
+  max-width: #{$max}px;
+  padding: 0px #{$padding}px;
+  margin: 0px auto;
+}
+
+@mixin fluid-text($min, $max, $container) {
+  font-size: clamp(#{$min}px, #{$max / $container * 100}vw, #{$max}px);
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}

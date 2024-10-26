@@ -1,0 +1,190 @@
+.header {
+  position: relative;
+  background-color: $dark-background;
+  color: white;
+}
+.header-container {
+  max-width: 1420px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+.header-body {
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-bottom {
+  border-top: 1px solid $header-color;
+}
+.header-bottom-body {
+  height: 70px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.header-bottom-link {
+  @include hover {
+    color: white;
+  }
+}
+.phone {
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+
+  &::before {
+    content: "";
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: url("../../assets/icons/phone.svg"), center, center;
+    background-size: contain;
+  }
+}
+.header-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.header-navigation-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-navigation-link {
+  padding: 21px;
+  white-space: nowrap;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 21px;
+    bottom: 10px;
+    width: 0%;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    transition-duration: 0.2s;
+  }
+
+  @include hover {
+    &::before {
+      width: calc(100% - (21px * 2));
+    }
+  }
+}
+.header-navigation-logo {
+  flex-shrink: 0;
+  height: 52px;
+
+  & img {
+    height: 100%;
+  }
+}
+
+.header-body-mobile {
+  height: 100%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-navigation-logo {
+}
+.menu-button {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 60%;
+    height: 2px;
+    background-color: white;
+    box-shadow: 0px 8px white, 0px -8px white;
+  }
+}
+.header-navigation-close {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 110%;
+    height: 2px;
+    background-color: white;
+    rotate: 45deg;
+  }
+  &::after {
+    rotate: -45deg;
+  }
+}
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .header-navigation {
+    width: 260px;
+    height: 100vh;
+    padding: 70px 40px;
+    position: absolute;
+    background-color: $dark-background;
+    right: 0px;
+    top: 0px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    transform: translateX(100%);
+    transition-duration: 0.2s;
+
+    &.open {
+      transform: translateX(0%);
+    }
+
+    z-index: 2;
+  }
+  .header-navigation-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.swiper-lazy-preloader {
+  height: 100px;
+  width: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="%2327A6FF" stroke="%2327A6FF" stroke-width="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="%2327A6FF" stroke="%2327A6FF" stroke-width="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="%2327A6FF" stroke="%2327A6FF" stroke-width="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>')
+    no-repeat center center;
+}
