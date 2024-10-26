@@ -192,6 +192,14 @@ a {
   line-height: 25px;
   letter-spacing: 0.95px;
 }
+.small-text {
+  color: $light-color;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.95px;
+}
 .quotation-text {
   color: $quota-color;
   font-family: "Roboto", sans-serif;
@@ -243,10 +251,6 @@ a {
   .icontext-item p {
     font-size: 17px;
   }
-  // .quotation-text {
-  //   font-size: 26px;
-  //   line-height: 32px;
-  // }
 }
 
 @media (max-width: 768px) {
@@ -255,10 +259,6 @@ a {
   }
   .container {
     padding: 0px 10px;
-  }
-  .header1 {
-    font-size: 28px;
-    line-height: 34px;
   }
   .header2,
   .header3 {

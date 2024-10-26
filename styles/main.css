@@ -7,8 +7,8 @@
 html,
 body {
   height: 100%;
-  font-size: 100%; /* Ensures font size consistency */
-  font-family: inherit; /* Uses the default system font */
+  font-size: 100%;
+  font-family: inherit;
 }
 
 img,
@@ -16,7 +16,7 @@ picture,
 video,
 canvas,
 svg {
-  max-width: 100%; /* Makes media elements responsive */
+  max-width: 100%;
   display: block;
 }
 
@@ -24,23 +24,23 @@ button,
 input,
 select,
 textarea {
-  font: inherit; /* Removes default font and applies inherited styles */
-  border: none; /* Removes the default border */
-  background: none; /* Removes default background */
+  font: inherit;
+  border: none;
+  background: none;
 }
 
 a {
   text-decoration: none;
-  color: inherit; /* Resets link styles */
+  color: inherit;
 }
 
 ul,
 ol {
-  list-style: none; /* Removes default list styling */
+  list-style: none;
 }
 
 table {
-  border-collapse: collapse; /* Removes default table border spacing */
+  border-collapse: collapse;
   border-spacing: 0;
 }
 
@@ -273,6 +273,15 @@ a {
   letter-spacing: 0.95px;
 }
 
+.small-text {
+  color: #686868;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.95px;
+}
+
 .quotation-text {
   color: #da7f35;
   font-family: "Roboto", sans-serif;
@@ -335,10 +344,6 @@ a {
   .container {
     padding: 0px 10px;
   }
-  .header1 {
-    font-size: 28px;
-    line-height: 34px;
-  }
   .header2,
   .header3 {
     font-size: 22px;
@@ -363,7 +368,7 @@ a {
   }
 }
 .footer {
-  background-color: #2f2f2f;
+  background-color: #0e171e;
   padding: 30px 0px;
 }
 
@@ -623,7 +628,22 @@ a {
   rotate: -45deg;
 }
 
+.blure {
+  display: none;
+}
+
 @media (max-width: 1300px) {
+  .blure {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+  .blure.visible {
+    display: block;
+  }
   .header .desktop {
     display: none;
   }
@@ -651,7 +671,7 @@ a {
     gap: 20px;
     transform: translateX(100%);
     transition-duration: 0.2s;
-    z-index: 2;
+    z-index: 100;
   }
   .header-navigation.open {
     transform: translateX(0%);

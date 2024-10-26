@@ -1,15 +1,21 @@
 ///////////////////////////////////////////////////////////////////////////
 // Toggle navigation menu
-
+const blure = document.querySelector(".blure");
 const headerNavigation = document.querySelector(".header-navigation");
 const openMenuButton = document.querySelector(".menu-button");
 const closeMenuButton = document.querySelector(".header-navigation-close");
 
+blure.addEventListener("click", () => {
+  headerNavigation.classList.remove("open");
+  blure.classList.remove("visible");
+});
 openMenuButton.addEventListener("click", () => {
   headerNavigation.classList.toggle("open");
+  blure.classList.toggle("visible");
 });
 closeMenuButton.addEventListener("click", () => {
   headerNavigation.classList.toggle("open");
+  blure.classList.toggle("visible");
 });
 
 ////////////////////////////////////////////////////////////////////////////
@@ -65,37 +71,4 @@ toggleButton.addEventListener("click", () => {
   toggleButton.textContent = moreContent.classList.contains("expanded")
     ? "see less-"
     : "see more+";
-});
-
-//////////////////////////////////////////////////////////////////////////////
-// Filling swiper with images
-
-const images = [];
-
-for (let i = 1; i <= 16; i++) {
-  const image = `./assets/rooms/room${i}.jpg`;
-  images.push(image);
-}
-
-const swiperWrapper = document.querySelector(".swiper-wrapper");
-
-images.forEach((src) => {
-  const slide = document.createElement("div");
-  slide.classList.add("swiper-slide");
-
-  const img = document.createElement("img");
-  img.src = src;
-  img.alt = "";
-  img.loading = "lazy";
-
-  const preloader = document.createElement("div");
-  preloader.classList.add(
-    "swiper-lazy-preloader",
-    "swiper-lazy-preloader-white"
-  );
-
-  slide.appendChild(img);
-  slide.appendChild(preloader);
-
-  swiperWrapper.appendChild(slide);
 });

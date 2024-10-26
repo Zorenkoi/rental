@@ -107,8 +107,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.header-navigation-logo {
-}
+
 .menu-button {
   position: relative;
   width: 42px;
@@ -156,7 +155,23 @@
   }
 }
 
+.blure {
+  display: none;
+}
+
 @media (max-width: 1300px) {
+  .blure {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+
+    &.visible {
+      display: block;
+    }
+  }
   .header {
     .desktop {
       display: none;
@@ -191,20 +206,7 @@
     &.open {
       transform: translateX(0%);
     }
-
-    // &::before {
-    //   content: "";
-    //   width: 100vw;
-    //   height: 100vh;
-    //   position: fixed;
-    //   left: -100px;
-    //   top: 0px;
-    //   opacity: 0.5;
-    //   z-index: -1;
-    //   background-color: red;
-    // }
-
-    z-index: 2;
+    z-index: 100;
   }
   .header-navigation-list {
     flex-direction: column;
