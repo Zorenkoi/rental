@@ -9,8 +9,6 @@ closeMenuButton.addEventListener("click", () => {
   headerNavigation.classList.toggle("open");
 });
 
-//////////////////////////////////////////////////////////////////////////
-
 const swiper = new Swiper(".swiper", {
   loop: true,
   navigation: {
@@ -49,8 +47,6 @@ const swiper = new Swiper(".swiper", {
   lazy: true,
 });
 
-//////////////////////////////////////////////////////////////////////////
-
 const moreContent = document.querySelector(".more-content");
 const toggleButton = document.querySelector(".toggle-content-btn");
 
@@ -62,7 +58,6 @@ toggleButton.addEventListener("click", () => {
     : "see more";
 });
 
-//////////////////////////////////////////////////////////////////////////
 const images = [];
 
 for (let i = 1; i <= 16; i++) {
@@ -92,3 +87,20 @@ images.forEach((src) => {
 
   swiperWrapper.appendChild(slide);
 });
+
+function togglePopup() {
+  alert("lol");
+  document.getElementById("popupOverlay").classList.toggle("popup-visible");
+}
+
+function validateForm() {
+  const checkInDate = document.getElementById("checkInDate").value;
+  const checkOutDate = document.getElementById("checkOutDate").value;
+
+  if (new Date(checkOutDate) <= new Date(checkInDate)) {
+    alert("Check-out date must be after check-in date.");
+    return false;
+  }
+  alert("Form submitted successfully!");
+  return true;
+}

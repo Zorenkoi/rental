@@ -14,20 +14,24 @@
   display: grid;
   gap: 20px;
 }
-.essential-info-top {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+.essential-info {
+  // background-color: red;
+  position: relative;
+  padding-left: 40px;
+  padding-top: 5px;
 }
+
 .essential-info-img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
   width: 30px;
   height: 30px;
   object-fit: contain;
 }
 .essential-info-title {
   font-size: 20px;
+  margin-bottom: 15px;
 }
 .title {
 }
