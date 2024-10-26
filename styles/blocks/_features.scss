@@ -7,9 +7,14 @@
 }
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 260px);
   column-gap: 20px;
   row-gap: 15px;
+}
+.features-grid-3col {
+  grid-template-columns: repeat(3, 260px);
+}
+.features-grid-2col {
+  grid-template-columns: repeat(2, 260px);
 }
 
 @media (max-width: 860px) {

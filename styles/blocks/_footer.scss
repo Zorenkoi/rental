@@ -70,5 +70,9 @@
   }
   .foote-icons {
     justify-content: center;
+    order: -1;
+  }
+  .footer-logo {
+    order: -2;
   }
 }
